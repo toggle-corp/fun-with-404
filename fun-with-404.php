@@ -22,7 +22,7 @@ class Page404{
         if(!isset($page_check->ID)){
             $page_404 = array(
                 'post_title' => "Fun with 404",
-                'post_content' => '<div id="maze-container"></div>',
+                'post_content' => '<div id="breakout-container"></div>',
                 'post_status' => 'publish',
                 'post_author' => 1,
                 'post_type' => 'page'
@@ -33,7 +33,7 @@ class Page404{
             $page_404 = array(
                 'post_title' => "Fun with 404",
                 'ID' => $page_check->ID,
-                'post_content' => '<div id="maze-container"></div>',
+                'post_content' => '<div id="breakout-container"></div>',
                 'post_status' => 'publish',
                 'post_author' => 1,
                 'post_type' => 'page'
@@ -52,7 +52,7 @@ class Page404{
             $template = get_page_template();
             rewind_posts();
 
-            wp_enqueue_script("parent-script", plugins_url().'/fun-with-404/maze.js', null, null, true);
+            wp_enqueue_script("parent-script", plugins_url().'/fun-with-404/breakout.js', null, null, true);
 
         }
 
